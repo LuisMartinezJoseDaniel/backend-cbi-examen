@@ -23,4 +23,12 @@ public class RolService {
     public void registerNewRol(Rol rol) {
         this.rolRepository.save(rol);
     }
+
+    public void deleteRol(Long id) {
+        boolean exists = this.rolRepository.existsById(id);
+        if (!exists) {
+            throw new IllegalStateException("El rol con el id " + id + " no existe");
+        }
+        this.rolRepository.deleteById(id);
+    }
 }

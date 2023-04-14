@@ -23,12 +23,13 @@ public class UserController {
 
     @PostMapping
     public void registerNewUser(@RequestBody User user) {
-        System.out.println(user);
+        this.userService.registerNewUser(user);
 
     }
 
     @DeleteMapping(path = "{userId}")
     public void deleteUser(@PathVariable("userId") Long userId) {
-        System.out.println(userId);
+        this.userService.deleteUser(userId);
     }
+
 }

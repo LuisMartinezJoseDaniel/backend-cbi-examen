@@ -27,5 +27,9 @@ public class RolController {
         this.rolService.registerNewRol(rol);
     }
 
+    @DeleteMapping(path = "{id}")
+    public void deleteRol(@PathVariable("id") Long id) {
+        this.rolService.deleteRol(id);
+    }
 
 }

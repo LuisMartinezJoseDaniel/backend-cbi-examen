@@ -35,7 +35,7 @@ public class AuthenticationService {
     public void deleteUser(Long userId) {
         boolean exists = this.authenticationRepository.existsById(userId);
         if(!exists){
-            throw new IllegalStateException("User with id " + userId + " does not exists");
+            throw new IllegalStateException("El usuario con el id " + userId + "no existe");
         }
         this.authenticationRepository.deleteById(userId);
     }
