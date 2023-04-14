@@ -20,9 +20,9 @@
 
 - POST  /api/v1/users
 - GET  /api/v1/users
-- GET  /api/v1/users/{userId}
+- DELETE  /api/v1/users/{userId}
 
 ### Roles
 - POST  /api/v1/roles
 - GET  /api/v1/roles
-- GET  /api/v1/roles/{id}
+- DELETE  /api/v1/roles/{id}
